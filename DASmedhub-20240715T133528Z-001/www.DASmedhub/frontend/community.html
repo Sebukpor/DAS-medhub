@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Page</title>
+    <link rel="stylesheet" href="comm.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/iam.png" alt="Logo"></a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button id="search-button">Search</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="discussion">
+            <div class="container">
+                <h2>Community Discussions</h2>
+                <div class="discussion-list">
+                    <div class="discussion-item">
+                        <h3>Discussion Title</h3>
+                        <p>Discussion content goes here. This is a brief description of the discussion topic.</p>
+                        <a href="discussion.html">Click here to Join Discussion</a>
+                    </div>
+                    <!-- Add more discussion items here -->
+                </div>
+            </div>
+        </section>
+        <section class="chat">
+            <div class="container">
+                <h2>Live Chat</h2>
+                <div class="chat-window">
+                    <div class="chat-messages" id="chatMessages"></div>
+                    <input type="text" id="chatInput" placeholder="Type a message...">
+                    <button id="sendButton">Send</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Health Community. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="comm.js"></script>
+</body>
+</html>

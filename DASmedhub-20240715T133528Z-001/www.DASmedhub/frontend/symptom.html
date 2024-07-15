@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Checker</title>
+    <link rel="stylesheet" href="symptom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkz5hQ1K9YZzv+M3n5P4t1n6HQ/mWLTmJNbaLiUnBffPiJpC5H1KY2+Kz1MK7f6SOuPiUlUUsN9szZOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logo-removebg-preview.png" alt="Logo"> <!-- Add your logo path here -->
+            <h1> DAS medhub Symptom Checker</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form id="symptomForm">
+                <fieldset>
+                    <legend>Provide Your Symptoms</legend>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select...</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="symptoms">Symptoms</label>
+                        <textarea id="symptoms" name="symptoms" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group audio-group">
+                        <label for="audio">Record Symptoms (Optional)</label>
+                        <button type="button" id="recordButton" class="audio-btn"><i class="fas fa-microphone"></i></button>
+                        <button type="button" id="stopButton" class="audio-btn stop-btn" disabled><i class="fas fa-stop"></i></button>
+                        <p id="recordingStatus"></p>
+                        <audio id="audioPlayback" controls style="display: none;"></audio>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy;DAS medhub | 2024 Symptom Checker</p>
+        </div>
+    </footer>
+    <script src="symptom.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAS MedHub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2><a href="#"><img src="images/iam.png" alt="DAS MedHub"></a></h2>
+        <nav>
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+            <a href="about.html"><i class="fa fa-user"></i> About Us</a>
+            <a href="services.html"><i class="fa fa-clone"></i> Services</a>
+            <a href="contact.html"><i class="fa fa-phone"></i> Contact</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="options">
+            <div><a href="symptom.html"><span>Provide Symptom for Diagnose</span></a></div>
+            <div><a href="firstaid.html"><span>First aid Guidance</span></a></div>
+            <div><a href="#"><span>Locate nearby health centers</span></a></div>
+            <div><a href="#"><span>Query live Doctor</span></a></div>
+            <div><a href="#"><span onclick="loadGoogleMapsAPI()">Access Google Map Direction</span></a></div>
+        </div>
+        <div class="image">
+            <img src="images/gettyimages-1331426716-612x612.jpg" alt="Doctor Image">
+        </div>
+    </div>
+
+    <div id="map" style="display:none;"></div>
+
+    <div class="how-it-works">
+        <h2>Access Services with Ease</h2>
+        <div class="steps">
+            <div>
+                <p>Find Specialists</p>
+                <a href="specialists.html"><button>Click Here</button></a>
+            </div>
+            <div>
+                <p>Join Community</p>
+                <a href="community.html"><button>Click Here</button></a>
+            </div>
+            <div>
+                <p>Find Available Hospitals</p>
+                <a href="hospital.html"><button onclick="loadGoogleMapsAPI()">Click Here</button></a>
+            </div>
+            <div>
+                <p>Get Assistance</p>
+                <a href="final.html"><button>Click Here</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-process">
+        <h2>Easy Booking Process</h2>
+        <ul>
+            <li>Find specialists</li>
+            <li>Describe your symptoms</li>
+            <li>Locate nearby hospital</li>
+            <li>Confirm your appointment</li>
+        </ul>
+        <a href="book.html"><button>Book Now</button></a>
+    </div>
+
+    <footer>
+        <div>
+            <h2>DAS MedHub</h2>
+            <div class="social">
+                <a href="https://www.linkedin.com/company/das-medhub/">LinkedIn</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">Spotify</a>
+            </div>
+        </div>
+        <div>
+            <h3>Company</h3>
+            <a href="#">About us</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms of use</a>
+        </div>
+        <div>
+            <h3>Community</h3>
+            <a href="#">Specialists</a>
+            <a href="#">Patients</a>
+            <a href="#">Blog</a>
+        </div>
+        <div>
+            <h3>Help</h3>
+            <a href="#">Support</a>
+            <a href="#">FAQ</a>
+            <a href="#">Mobile App</a>
+        </div>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

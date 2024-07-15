@@ -1,0 +1,64 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background: #555;
+}
+
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+}

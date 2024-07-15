@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Aid Guidance</title>
+    <link rel="stylesheet" href="firstaid.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo-removebg-preview.png" alt="DAS Medhub Logo" id="logo">
+        <h1>DAS Medhub First Aid</h1>
+        <nav>
+            <ul>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#audio">Audio</a></li>
+                <li><a href="#live-teaching">Live Guidance</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for first aid...">
+            <button id="search-button">Search</button>
+        </div>
+    </header>
+    <main>
+        <section id="videos" class="content-section">
+            <h2>Video Instructions</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/sample-video1" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/sample-video2" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/sample-video3" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="audio" class="content-section">
+            <h2>Audio Instructions</h2>
+            <div class="audio-container">
+                <audio controls>
+                    <source src="audio/first-aid-audio1.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <audio controls>
+                    <source src="audio/first-aid-audio2.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <audio controls>
+                    <source src="audio/first-aid-audio3.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </section>
+        <section id="live-teaching" class="content-section">
+            <h2>Live Teaching Sessions</h2>
+            <div class="live-container">
+                <p>Join our live teaching sessions to get real-time assistance and guidance from professionals.</p>
+                <button id="join-live-session">Join Live Session</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 DAS Medhub. All rights reserved.</p>
+    </footer>
+    <script src="firstaid.js"></script>
+</body>
+</html>

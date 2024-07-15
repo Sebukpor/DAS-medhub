@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAS Medical Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM8VZI6tW8NRczNf6ZjM/h4DBvWsd0nJ8xz2FtF" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            font-weight: bolder;
+        }
+        header h1 {
+            font-size: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        }
+        header .logo {
+            height: 220px;
+            width: 270px;
+            position: absolute;
+            top: 5px;
+            left: 20px;
+        }
+        .chat-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            margin-top: 120px;
+            padding: 30px;
+            background-color: #2c3e50;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .chat-heading {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 300;
+            margin-bottom: 10px;
+            color: white;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            min-height: 370px;
+        }
+        .accordion {
+            margin-top: 20px;
+            background-color: #2c3e50;
+            border-radius: 5px;
+        }
+        .accordion-button {
+            color: #333;
+            background-color: #eee;
+        }
+        .accordion-body {
+            color: #333;
+        }
+        .copy-btn {
+            margin-left: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #5072A7;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="images/logo-removebg-preview.png" alt="Health Service Center Logo" class="logo">
+    <h1>Input your Query for assistance</h1>
+</header>
+<div class="container chat-container">
+    <h1 class="chat-heading">DAS medhub chatbot assistance</h1>
+
+    <div class="accordion" id="appDescriptionAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="descriptionHeading">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDescription" aria-expanded="true" aria-controls="collapseDescription">
+                    About This App
+                </button>
+            </h2>
+            <div id="collapseDescription" class="accordion-collapse collapse" aria-labelledby="descriptionHeading" data-bs-parent="#appDescriptionAccordion">
+                <div class="accordion-body">
+                    The DAS MedHub Chatbot is an advanced medical chatbot designed to assist users with a variety of health-related needs. It provides a comprehensive symptom assessment tool, allowing users to input their symptoms and receive possible diagnoses based on a vast database of medical knowledge. Additionally, it offers reliable information on a wide range of medical conditions, treatments, and medications, empowering users with the knowledge they need to make informed health decisions. The chatbot also provides guidance and recommendations, advising users when to seek medical attention, offering self-care tips, and suggesting over-the-counter remedies. For those needing further assistance, the DAS MedHub Chatbot can help schedule appointments with healthcare providers if integrated with medical services. Furthermore, it supports chronic disease management and follow-up care, helping patients adhere to treatment plans with reminders for medications and appointments, thereby enhancing overall patient support and care continuity.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <iframe id="chatbaseFrame" src="https://www.chatbase.co/chatbot-iframe/l7Wo86G6EbxVNL52pFqYz"></iframe>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const iframe = document.getElementById('chatbaseFrame');
+        
+        iframe.onload = function() {
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length) {
+                        mutation.addedNodes.forEach(function(node) {
+                            if (node.nodeType === 1 && node.classList.contains('chat-response')) { // Adjust the class to match the response element
+                                const copyButton = document.createElement('button');
+                                copyButton.textContent = 'Copy';
+                                copyButton.classList.add('copy-btn');
+                                copyButton.onclick = function() {
+                                    copyToClipboard(node);
+                                };
+                                node.appendChild(copyButton);
+                            }
+                        });
+                    }
+                });
+            });
+
+            observer.observe(iframeDoc.body, { childList: true, subtree: true });
+        };
+
+        function copyToClipboard(element) {
+            const text = element.textContent;
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Text copied to clipboard');
+            }).catch(function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    });
+</script>
+</body>
+</html>

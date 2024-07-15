@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Service Center Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images\logo-removebg-preview.png" alt="Health Service Center Logo" class="logo">
+        <h1></h1>
+    </header>
+    <main>
+        <section class="booking-form">
+            <h2>Book a Service</h2>
+            <form>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Required</label>
+                    <select id="service" name="service" required>
+                        <option value="general">General Consultation</option>
+                        <option value="dental">Dental Checkup</option>
+                        <option value="cardiology">Cardiology</option>
+                        <option value="orthopedics">Orthopedics</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointmentDate">Preferred Appointment Date</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                </div>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Health Service Center. All rights reserved.</p>
+    </footer>
+</body>
+</html>

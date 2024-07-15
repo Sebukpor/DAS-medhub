@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:  whitesmoke;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px; /* Adjust as necessary */
+    height: 150px; /* Maintain aspect ratio */
+}
+
+header h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: bold;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.search-container input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+}
+
+.search-container button {
+    padding: 5px 10px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #1a252f;
+}
+
+.content-section {
+    margin: 30px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.video-container, .audio-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.video-container iframe, .audio-container audio {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 5px;
+}
+
+.live-container {
+    text-align: center;
+}
+
+button {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 5px 0; /* Reduced padding */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
